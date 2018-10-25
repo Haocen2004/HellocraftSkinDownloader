@@ -124,7 +124,7 @@ public class Main {
 			
 		}else {
 			
-			System.out.println("NetWork Error");
+			System.out.println("NetWork Error!");
 			
 		}
 		
