@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.haocen2004.ui.UImain">
+   <children>
+      <Button id="GetSkin" layoutX="286.0" layoutY="130.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" text="Get Skin" />
+      <TextField id="UserNamein" layoutX="90.0" layoutY="139.0" prefHeight="23.0" prefWidth="185.0" />
+      <Text layoutX="14.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="UserName" />
+      <Label id="feedback" alignment="CENTER" layoutX="14.0" layoutY="218.0" prefHeight="15.0" prefWidth="370.0" text="System : Wait to Get SKin" />
+   </children>
+</AnchorPane>

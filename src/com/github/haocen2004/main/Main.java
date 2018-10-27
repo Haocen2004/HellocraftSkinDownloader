@@ -1,6 +1,7 @@
 package com.github.haocen2004.main;
 
 import com.github.haocen2004.cmd.SkinGet;
+import com.github.haocen2004.ui.UImain;
 
 public class Main {
 
@@ -25,6 +26,7 @@ public class Main {
 
 				} else {
 
+					
 					break;
 
 				}
@@ -38,9 +40,8 @@ public class Main {
 
 			}
 
-			// UImain.load;
-
 		}
+		UImain.launch();
 	}
 
 }
