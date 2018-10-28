@@ -1,9 +1,13 @@
 package com.github.haocen2004.main;
 
 import com.github.haocen2004.cmd.SkinGet;
-import com.github.haocen2004.ui.UImain;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.layout.BorderPane;
+import javafx.stage.Stage;
 
-public class Main {
+public class Main extends Application {
 
 	public static void main(String[] args) {
 
@@ -26,7 +30,6 @@ public class Main {
 
 				} else {
 
-					
 					break;
 
 				}
@@ -36,12 +39,31 @@ public class Main {
 			} catch (ArrayIndexOutOfBoundsException e) {
 
 				System.out.println("Without Start Args");
+				launch();
 				break;
 
 			}
 
 		}
-		UImain.launch();
+
+	}
+
+	@Override
+	public void start(Stage primaryStage) {
+		try {
+
+			System.out.println(getClass().getResource("UImain.fxml"));
+			BorderPane root = new BorderPane(FXMLLoader.load(getClass().getResource("UImain.fxml")));
+			Scene scene = new Scene(root);
+			primaryStage.setScene(scene);
+			primaryStage.setTitle("Hellocraft SKins Downloader");
+			primaryStage.show();
+
+		} catch (Exception e) {
+
+			e.printStackTrace();
+
+		}
 	}
 
 }
