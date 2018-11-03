@@ -1,19 +1,25 @@
 package com.github.haocen2004.main;
 
-import com.github.haocen2004.cmd.SkinGet;
-import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
-import javafx.scene.layout.BorderPane;
-import javafx.stage.Stage;
+import java.io.File;
 
-public class Main extends Application {
+import com.github.haocen2004.core.SkinGet;
+import com.github.haocen2004.ui.Launcher;
+
+public class Main {
 
 	public static void main(String[] args) {
 
+		System.out.println("Copyright By Hao_cen 2018 ");
+		System.out.println("Wait For System Boot ...");
 		int i = 0;
 		String UserName;
 
+		checkJavaFX();
+		
+		File file = new File(".\\skins");
+		if (!file.exists() && !file.isDirectory()) {
+			file.mkdir();
+		}
 		while (true) {
 			try {
 
@@ -39,7 +45,7 @@ public class Main extends Application {
 			} catch (ArrayIndexOutOfBoundsException e) {
 
 				System.out.println("Without Start Args");
-				launch();
+				Launcher.main(args);
 				break;
 
 			}
@@ -48,21 +54,11 @@ public class Main extends Application {
 
 	}
 
-	@Override
-	public void start(Stage primaryStage) {
+	private static void checkJavaFX() {
 		try {
-
-			System.out.println(getClass().getResource("UImain.fxml"));
-			BorderPane root = new BorderPane(FXMLLoader.load(getClass().getResource("UImain.fxml")));
-			Scene scene = new Scene(root);
-			primaryStage.setScene(scene);
-			primaryStage.setTitle("Hellocraft SKins Downloader");
-			primaryStage.show();
-
-		} catch (Exception e) {
-
-			e.printStackTrace();
-
+			Class.forName("javafx.application.Application");
+		} catch (ClassNotFoundException e) {
+			System.out.println("javafx none!");
 		}
 	}
 

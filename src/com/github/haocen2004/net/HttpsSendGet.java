@@ -1,4 +1,4 @@
-package com.github.haocen2004.http;
+package com.github.haocen2004.net;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
