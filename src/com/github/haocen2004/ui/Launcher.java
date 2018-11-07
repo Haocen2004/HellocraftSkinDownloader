@@ -10,7 +10,15 @@ import javafx.stage.Stage;
 public class Launcher extends Application {
 
 	public static void main(String[] args) {
+
 		launch();
+
+	}
+	
+	@Override
+	public void stop() throws Exception {
+
+		System.out.println("System close.");
 
 	}
 

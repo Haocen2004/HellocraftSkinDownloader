@@ -69,9 +69,13 @@ public class Main {
 
 	private static void checkJavaFX() {
 		try {
+			
 			Class.forName("javafx.application.Application");
+			
 		} catch (ClassNotFoundException e) {
+			
 			System.out.println("javafx none!");
+			
 		}
 	}
 
